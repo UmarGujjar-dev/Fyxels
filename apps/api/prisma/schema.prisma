@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  service   String
+  budget    String?
+  message   String   @db.Text
+  status    String   @default("new")
+  source    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("leads")
+}
+
+model CaseStudy {
+  id           Int      @id @default(autoincrement())
+  slug         String   @unique
+  title        String
+  client       String
+  industry     String
+  services     String
+  coverImage   String
+  excerpt      String   @db.Text
+  content      String   @db.LongText
+  metrics      String   @db.Text
+  featured     Boolean  @default(false)
+  publishedAt  DateTime @default(now())
+  createdAt    DateTime @default(now())
+
+  @@map("case_studies")
+}
+
+model BlogPost {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  title       String
+  excerpt     String   @db.Text
+  content     String   @db.LongText
+  category    String
+  tags        String?
+  author      String   @default("Fyxels Team")
+  coverImage  String
+  featured    Boolean  @default(false)
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  @@map("blog_posts")
+}
+
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  subject   String
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+
+  @@map("contact_messages")
+}

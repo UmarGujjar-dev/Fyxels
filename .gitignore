@@ -1,0 +1,42 @@
+# Dependency directories
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Next.js / Build outputs
+.next/
+out/
+build/
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment files
+.env
+.env*.local
+.env.development
+.env.production
+.env.test
+
+# IDE / System
+.DS_Store
+*.pem
+.vscode/
+.idea/
+
+# Turbo & TS
+.turbo
+*.tsbuildinfo
+
+# Vercel
+.vercel

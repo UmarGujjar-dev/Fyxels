@@ -1,0 +1,21 @@
+{
+  "name": "fyxels",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=apps/web\" \"npm run dev --workspace=apps/api\"",
+    "build": "npm run build --workspace=packages/db && npm run build --workspace=apps/web && npm run build --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "db:generate": "npm run generate --workspace=packages/db",
+    "db:push": "npm run db:push --workspace=packages/db",
+    "db:migrate": "npm run migrate --workspace=packages/db"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
