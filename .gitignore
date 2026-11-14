@@ -40,3 +40,11 @@ lerna-debug.log*
 
 # Vercel
 .vercel
+
+
+# Github 
+.github/
+
+
+#Documentation
+doc/
