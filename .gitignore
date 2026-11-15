@@ -47,4 +47,6 @@ lerna-debug.log*
 
 
 #Documentation
-doc/
+doc/*
+!doc/Prompt.md
+!doc/TaskSummaryDetails.md

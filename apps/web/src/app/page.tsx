@@ -1,7 +1,5 @@
-"use client";
-
-import React from "react";
 import { Component as LunarGravityCard } from "@/components/ui/lunar-gravity-card";
+import { HomeSections } from "@/components/home/HomeSections";
 
 export default function HomePage() {
   return (
@@ -12,6 +10,7 @@ export default function HomePage() {
           <LunarGravityCard />
         </div>
       </section>
+      <HomeSections />
     </div>
   );
 }
