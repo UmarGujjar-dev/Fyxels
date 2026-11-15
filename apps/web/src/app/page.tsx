@@ -1,5 +1,14 @@
 import { Component as LunarGravityCard } from "@/components/ui/lunar-gravity-card";
-import { HomeSections } from "@/components/home/HomeSections";
+import { TrustedCompanies } from "@/components/home/TrustedCompanies";
+import { OurExpertise } from "@/components/home/OurExpertise";
+import { OurSolutions } from "@/components/home/OurSolutions";
+import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { WhyChooseFyxels } from "@/components/home/WhyChooseFyxels";
+import { DevelopmentProcess } from "@/components/home/DevelopmentProcess";
+import { TechnologyStack } from "@/components/home/TechnologyStack";
+import { Testimonials } from "@/components/home/Testimonials";
+import { FAQ } from "@/components/home/FAQ";
+import { FinalCTA } from "@/components/home/FinalCTA";
 
 export default function HomePage() {
   return (
@@ -10,7 +19,16 @@ export default function HomePage() {
           <LunarGravityCard />
         </div>
       </section>
-      <HomeSections />
+      <TrustedCompanies />
+      <OurExpertise />
+      <OurSolutions />
+      <FeaturedProjects />
+      <WhyChooseFyxels />
+      <DevelopmentProcess />
+      <TechnologyStack />
+      <Testimonials />
+      <FAQ />
+      <FinalCTA />
     </div>
   );
 }

@@ -74,3 +74,78 @@ Implement all missing homepage sections between the existing Hero Banner and Foo
 ### Original User Prompt
 
 read apps/web/agent.md file update doc folder.
+
+## Task 03 – Modular Homepage Architecture
+
+**Date:** 2026-11-15
+
+**Purpose:** Refactor the homepage into one component per section and move all static section content into typed, section-specific data modules.
+
+### Original User Prompt
+
+**Task: Modular Homepage Architecture – Next.js + TypeScript**
+
+Refactor the Fyxels homepage into a clean, modular, reusable component architecture.
+
+### Requirements
+
+1. Create a separate component for each homepage section:
+
+- TrustedCompanies
+- OurExpertise
+- OurSolutions
+- FeaturedProjects
+- WhyChooseFyxels
+- DevelopmentProcess
+- TechnologyStack
+- Testimonials
+- FAQ
+- FinalCTA
+2. Create a dedicated `data` folder to store all dummy/static data separately from UI components.
+3. Create individual data files for each section inside the data folder, exporting their respective arrays/objects.
+4. Import the relevant data into each component instead of hardcoding content inside JSX.
+5. Create a central homepage entry point (`page.tsx`) that imports and renders all section components in the correct order.
+
+### Suggested Folder Structure
+
+```text
+src/
+├── app/
+│   └── page.tsx
+├── components/
+│   └── home/
+│       ├── TrustedCompanies.tsx
+│       ├── OurExpertise.tsx
+│       ├── OurSolutions.tsx
+│       ├── FeaturedProjects.tsx
+│       ├── WhyChooseFyxels.tsx
+│       ├── DevelopmentProcess.tsx
+│       ├── TechnologyStack.tsx
+│       ├── Testimonials.tsx
+│       ├── FAQ.tsx
+│       ├── FinalCTA.tsx
+│       └── data/
+│           ├── trustedCompanies.ts
+│           ├── expertise.ts
+│           ├── solutions.ts
+│           ├── projects.ts
+│           ├── statistics.ts
+│           ├── developmentProcess.ts
+│           ├── technologyStack.ts
+│           ├── testimonials.ts
+│           └── faq.ts
+```
+
+### Mandatory Rules
+
+- Use TypeScript interfaces/types for all data structures.
+- Export data from individual files and import it into corresponding components.
+- Keep components focused on UI and presentation only.
+- Use `.map()` for rendering repeated data.
+- Avoid duplicated code and hardcoded content in components.
+- Follow the attached reference screenshot.
+- Preserve the exact existing website color scheme.
+- Do not modify the existing Header, Hero Banner, Footer, or their functionality.
+- Do not change existing routes or global styling.
+
+**Goal:** Clean, maintainable, scalable, reusable component architecture with centralized dummy data, matching the supplied Fyxels homepage reference design.
