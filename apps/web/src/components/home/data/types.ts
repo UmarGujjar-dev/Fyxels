@@ -2,10 +2,14 @@ import type { LucideIcon } from "lucide-react";
 
 export interface TrustedPlatform {
   name: string;
+  subtitle?: string;
+  logoType: "al-ghurair" | "al-jouf" | "weatherbys" | "bestseller" | "fam" | "interwood" | "nestle" | "under-armour";
 }
 
 export interface TrustedCompaniesData {
-  introduction: string;
+  eyebrow: string;
+  title: string;
+  introduction?: string;
   platforms: TrustedPlatform[];
 }
 
